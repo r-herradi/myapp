@@ -93,7 +93,7 @@ var Player = function (_a) {
                 React.createElement(react_1.Box, { width: "10%" },
                     React.createElement(react_1.Text, { fontSize: "xs" }, formatters_1.formatTime(seek))),
                 React.createElement(react_1.Box, { width: "80%" },
-                    React.createElement(react_1.RangeSlider, { "aria-label": ["min", "max"], step: 0.1, min: 0, id: "player-range", max: duration ? duration.toFixed(2) : 0, onChange: onSeek, value: [seek], onChangeStart: function () { return setIsSeeking(true); }, onChangeEnd: function () { return setIsSeeking(false); } },
+                    React.createElement(react_1.RangeSlider, { "aria-label": ["min", "max"], step: 0.1, min: 0, id: "player-range", max: duration ? parseFloat(duration.toFixed(2)) : 0, onChange: onSeek, value: [seek], onChangeStart: function () { return setIsSeeking(true); }, onChangeEnd: function () { return setIsSeeking(false); } },
                         React.createElement(react_1.RangeSliderTrack, { bg: "gray.800" },
                             React.createElement(react_1.RangeSliderFilledTrack, { bg: "gray.600" })),
                         React.createElement(react_1.RangeSliderThumb, { index: 0 }))),

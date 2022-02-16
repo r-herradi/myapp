@@ -89,7 +89,7 @@ const Player = ({
       if (shuffle) {
         const next = Math.floor(Math.random() * songs.length);
         if (next === state) {
-          return nextSong();
+          return nextSong() as unknown as number;
         }
         return next;
       }
@@ -200,7 +200,7 @@ const Player = ({
               step={0.1}
               min={0}
               id="player-range"
-              max={duration ? duration.toFixed(2) : 0}
+              max={duration ? parseFloat(duration.toFixed(2)) : 0}
               onChange={onSeek}
               value={[seek]}
               onChangeStart={() => setIsSeeking(true)}
